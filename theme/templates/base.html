@@ -1,26 +1,50 @@
-{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Django Tailwind</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_css %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PlantCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-green-50 text-gray-800 min-h-screen flex flex-col">
 
-<body class="bg-gray-50 text-black font-serif leading-normal tracking-normal">
-
-    <div class="toast toast-top toast-end">
-        <div class="alert alert-info">
-            <span>Hello from daisyUi 👋</span>
-        </div>
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow">
+    <div class="flex items-center space-x-2">
+      <img src="your-logo.png" alt="PlantCare" class="w-6 h-6" />
+      <span class="text-xl font-semibold text-green-700">PlantCare</span>
     </div>
+    <nav class="space-x-6 text-sm font-medium text-gray-700">
+      <a href="#" class="hover:text-green-600">Browse Plants</a>
+      <a href="#" class="hover:text-green-600">My Wishlist</a>
+      <a href="#" class="hover:text-green-600">Profile</a>
+    </nav>
+  </header>
 
-<div class="container mx-auto">
-    <section class="flex items-center justify-center h-screen">
-        <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-    </section>
-</div>
+  <!-- Main Content -->
+  <main class="flex-grow">
+    {% block content %}
+    <!-- Page-specific content will go here -->
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 px-6 border-t text-sm text-gray-600 shadow">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between h-full">
+      <div class="flex items-center space-x-2 mb-4 md:mb-0">
+        <img src="your-logo.png" alt="Logo" class="w-5 h-5" />
+        <span class="text-green-700 font-semibold">PlantCare</span>
+      </div>
+      <div>© 2024 PlantCare. All rights reserved.</div>
+      <div class="space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:underline">About</a>
+        <a href="#" class="hover:underline">Contact</a>
+        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline">Terms</a>
+        <a href="#" class="hover:underline">Help</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

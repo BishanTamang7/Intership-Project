@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <!-- Hero Section -->
+  <section class="bg-green-700 text-white text-center py-20 px-4">
+    <h1 class="text-4xl font-bold mb-4">Welcome to PlantCare</h1>
+    <p class="mb-6 text-lg">Your trusted platform for plant care and nursery connections</p>
+    <button class="bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-2 rounded shadow">
+      Browse Plants
+    </button>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 px-4 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-gray-800">What We Offer</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow p-8 flex flex-col items-center space-y-4">
+        <img src="plant-icon.png" alt="Plant" class="w-12 h-12" />
+        <h3 class="text-xl font-semibold text-gray-800">Plant Discovery</h3>
+        <p class="text-gray-600">Browse and discover plants from trusted nurseries</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow p-8 flex flex-col items-center space-y-4">
+        <img src="heart-icon.png" alt="Care" class="w-12 h-12" />
+        <h3 class="text-xl font-semibold text-gray-800">Care Guidance</h3>
+        <p class="text-gray-600">Get expert advice and care instructions</p>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
