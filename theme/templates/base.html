@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,8 @@
   <!-- Header -->
   <header class="flex items-center justify-between px-6 py-4 bg-white shadow">
     <div class="flex items-center space-x-2">
-      <img src="your-logo.png" alt="PlantCare" class="w-6 h-6" />
-      <span class="text-xl font-semibold text-green-700">PlantCare</span>
+      <img src="{% static 'image/favicon.ico' %}" alt="My image">
+      <a href="/" class="text-xl font-semibold text-green-700">PlantCare</a>
     </div>
     <nav class="space-x-6 text-sm font-medium text-gray-700">
       <a href="#" class="hover:text-green-600">Browse Plants</a>
@@ -32,7 +33,7 @@
   <footer class="bg-white py-4 px-6 border-t text-sm text-gray-600 shadow">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between h-full">
       <div class="flex items-center space-x-2 mb-4 md:mb-0">
-        <img src="your-logo.png" alt="Logo" class="w-5 h-5" />
+        <img src="{% static 'image/favicon.ico' %}" alt="My image">
         <span class="text-green-700 font-semibold">PlantCare</span>
       </div>
       <div>© 2024 PlantCare. All rights reserved.</div>
