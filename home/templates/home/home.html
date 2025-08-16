@@ -1,105 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlantCare - Your trusted platform for plant care</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'plant-green': '#386947ff',
-                        'plant-light': '#f5f5f0'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-sans">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl">🌱</span>
-                    <span class="text-xl font-semibold text-gray-900">PlantCare</span>
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="flex space-x-8">
-                    <a href="#" class="text-gray-900 font-medium">Browse Plants</a>
-                    <a href="#" class="text-gray-900 font-medium">My Wishlist</a>
-                    <a href="#" class="text-gray-900 font-medium">Profile</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+{% extends "base.html" %}
+{% block content %}
+<section class="bg-plant-green py-24">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h1 class="text-5xl font-bold text-white mb-6">Welcome to PlantCare</h1>
+        <p class="text-xl text-green-100 mb-12 max-w-2xl mx-auto">Your trusted platform for plant care and nursery connections</p>
+        <button class="bg-green-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+        Browse Plants
+        </button>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="bg-plant-green py-24">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h1 class="text-5xl font-bold text-white mb-6">Welcome to PlantCare</h1>
-            <p class="text-xl text-green-100 mb-12 max-w-2xl mx-auto">Your trusted platform for plant care and nursery connections</p>
-            <button class="bg-green-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-            Browse Plants
-            </button>
-        </div>
-    </section>
-
-    <!-- What We Offer Section -->
-    <section class="bg-plant-light py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-gray-800 text-center mb-16">What We Offer</h2>
+<section class="bg-plant-light py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-gray-800 text-center mb-16">What We Offer</h2>
             
-            <div class="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
-                <!-- Plant Discovery Card -->
-                <div class="text-center bg-white rounded-lg shadow-lg p-8 border border-gray-100">
-                    <div class="text-6xl mb-6">🌱</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Plant Discovery</h3>
-                    <p class="text-gray-600 text-lg">Browse and discover plants from trusted nurseries</p>
-                </div>
+        <div class="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+            <div class="text-center bg-white rounded-lg shadow-lg p-8 border border-gray-100">
+                <div class="text-6xl mb-6">🌱</div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Plant Discovery</h3>
+                <p class="text-gray-600 text-lg">Browse and discover plants from trusted nurseries</p>
+            </div>
 
-                <!-- Care Guidance Card -->
-                <div class="text-center bg-white rounded-lg shadow-lg p-8 border border-gray-100">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-green-500 rounded-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Care Guidance</h3>
-                    <p class="text-gray-600 text-lg">Get expert advice and care instructions</p>
+            <div class="text-center bg-white rounded-lg shadow-lg p-8 border border-gray-100">
+                <div class="w-16 h-16 mx-auto mb-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                    </svg>
                 </div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Care Guidance</h3>
+                <p class="text-gray-600 text-lg">Get expert advice and care instructions</p>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 h-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center h-16">
-                <!-- Logo and Copyright -->
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-2xl">🌱</span>
-                        <span class="text-xl font-semibold text-gray-900">PlantCare</span>
-                    </div>
-                    <span class="text-gray-500">© 2024 PlantCare. All rights reserved.</span>
-                </div>
-                
-                <!-- Footer Links -->
-                <nav class="flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-gray-700">About</a>
-                    <a href="#" class="text-gray-500 hover:text-gray-700">Contact</a>
-                    <a href="#" class="text-gray-500 hover:text-gray-700">Privacy</a>
-                    <a href="#" class="text-gray-500 hover:text-gray-700">Terms</a>
-                    <a href="#" class="text-gray-500 hover:text-gray-700">Help</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
+{% endblock %}
